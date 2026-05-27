@@ -1,0 +1,126 @@
+# Module 2: Dynamic Connnectivity (Union Find)
+
+## What I learned
+
+This module introduced the Dynamic Connectivity problem and different approaches to solve it efficiently.
+
+The main question:
+
+"Are two objects connected?"
+
+Examples:
+- Social networks
+- Computer networks
+- Road Maps
+- Friend groups
+- Image processing
+
+---
+
+## Core operations
+
+### Union(p, q)
+
+Connect two objects/groups.
+
+Example:
+
+Union(1, 2)
+
+Result:
+
+1 -- 2
+
+---
+
+### Connected(p, q)
+
+Checks whether two objects belong to the same group.
+
+Example:
+
+Connected(1, 2)
+
+Returns:
+
+true
+
+Important:
+
+Connected() does not change data.
+
+It only checks.
+
+---
+
+## Dynamic Connectivity 
+
+Initially:
+
+0 1 2 3 4
+
+All objects are seperate.
+
+After:
+
+Union(1, 2)
+Union(2, 3)
+
+Groups become:
+
+1 --- 2 --- 3
+
+Now:
+
+Connected(1, 3)
+
+returns true
+
+---
+
+# Quick Find
+
+Idea:
+
+id[i] = component/group id
+
+Initial:
+
+Index: 0 1 2 3 4
+
+id[]:  0 1 2 3 4
+
+
+Example:
+
+Union(1, 2)
+
+Update every occurency of group 1 -> group 2
+
+Result:
+
+0 2 2 3 4
+
+Connected(1, 2):
+
+Check:
+
+id[1] == id[2]
+
+Advantages:
+- Conneccted() is very fast
+
+Disadvantages:
+- Union() scans the whole array
+
+Time Complexity:
+
+Connected: O(1)
+Union: O(N)
+
+Summary:
+
+Fast query
+Slow union
+
+---
