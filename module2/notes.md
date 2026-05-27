@@ -124,3 +124,60 @@ Fast query
 Slow union
 
 ---
+
+## Quick Union
+
+Idea:
+
+id[i] = parent of i
+
+Objects from trees.
+
+Initial:
+
+0  1  2  3  4
+
+Each object points to itself.
+
+Example:
+
+Union(1, 2)
+Union(2, 3)
+
+Tree:
+
+1 -> 2 -> 3
+
+Root:
+
+A node whose parent is itself.
+
+Code idea:
+
+```
+while(i != id[i]) 
+	i = id[i];
+```
+
+Connected:
+
+root(p) == root(q)
+
+Advantages:
+- Union is simpler
+
+Disadvantages:
+- Trees can become tall
+
+Bad case:
+
+1 -> 2 -> 3 -> 4 -> 5
+
+Looks like a Linked list
+
+Time Complexity:
+
+Union: O(N)
+Connected: O(N)
+
+---
