@@ -116,6 +116,7 @@ Disadvantages:
 Time Complexity:
 
 Connected: O(1)
+
 Union: O(N)
 
 Summary:
@@ -178,6 +179,7 @@ Looks like a Linked list
 Time Complexity:
 
 Union: O(N)
+
 Connected: O(N)
 
 ---
