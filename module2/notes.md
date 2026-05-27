@@ -183,3 +183,128 @@ Union: O(N)
 Connected: O(N)
 
 ---
+
+## Weighted Quick Union
+
+Problem solved:
+
+Prevent tall trees
+
+Idea:
+
+Attach smaller tree under larger tree
+
+Maintain:
+
+size[]
+
+Example:
+
+Small Tree:
+
+1 -> 2
+
+Big Tree:
+
+3 -> 4 -> 5
+
+Attach:
+
+1 -> 2
+
+under:
+
+3 -> 4 -> 5
+
+Advantages:
+
+Tree height remains small
+
+Time:
+
+O(log N)
+
+---
+
+# Path Compression
+
+Idea:
+
+Flatten trees during root finding
+
+Before:
+
+1 -> 2 -> 3 -> 4 -> 5
+
+After finding root:
+
+```
+1
+ \
+  \
+   -> 5
+```
+
+2 -> 5
+
+3 -> 5
+
+4 -> 5
+
+Result:
+
+Future operations become much faster
+
+---
+
+## Final Complexity
+
+Quick Find:
+
+Connected -> O(1)
+
+Union     -> O(N)
+
+
+Quick Union: 
+
+Connected -> O(N)
+Union     -> O(N)
+
+
+Weighted Quick Union + Path compression:
+
+Almost O(1)
+
+---
+
+## Personal Notes
+
+Big lesson:
+
+Quick Find updates the whole array.
+
+Quick Union creates trees.
+
+Weighted Union prevents tall trees.
+
+Path Compression flattens trees.
+
+Real applications:
+- Social networks
+- Network Connectivity
+- Number of island
+
+---
+
+## Progress
+
+Completed:
+- Dynamic Connectivity
+- Quick Find
+- Quick Union
+- Weigted Union
+- Path Compression
+
+Next:
+Algorithm analysis and deeper complexity understanding
