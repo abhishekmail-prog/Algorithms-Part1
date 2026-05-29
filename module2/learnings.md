@@ -24,4 +24,4 @@ root(p) == root(q)
 
 Takeaway:
 
-Quick Union works correctly if operations happen on roots.
+Quick Union works correctly if operations happen on the roots.
