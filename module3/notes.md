@@ -232,6 +232,136 @@ N^3 dominates smaller terms.
 
 ---
 
+# Order of Growth
+
+Common runtime classes:
+```
+	| Growth  | Name |
+	|---------|--------------|
+	|   1	  | Constant     |
+	| log N	  | Logarithmic  |
+	|   N     | Linear       |
+	| N log N | Linearithmic |
+	|   N^2   | Quardaric    |
+	|   N^3   | Cubic        |
+	|   2^N   | Exponential  |
+```	
+
+# Runtime Patterns in Code
+
+No loop               		->    Constant Time
+
+Single loop	      		->    Linear Time
+
+Two nested loop       		->    Quadratic Time
+
+Three nested loop     		->    Cubic Time
+
+Repeatedly divide problem by 2  ->    Logarithmic Time
+
+Divide and Conquer algorithms   ->    N log N Time
+
+---
+
+# Practical Imortance
+
+Preferred algorithms:
+
+- Linear (N)
+- Linearithmic (N log N)
+
+
+Less scalable:
+
+- Quadratic (N^2)
+- Cubic (N^3)
+
+As input size grows:
+
+Linear and N log N algorithms remain practical.
+
+Quadratic and Cubic algorithm become too slow.
+
+---
+
+# Binary Search
+
+Requirement:
+- Array must be sorted.
+
+Idea:
+- Compare target with middle element.
+- Discard half of the search space.
+- Repeat until found or search space becomes empty.
+
+Example:
+
+Array: 
+[5, 12, 25, 33, 43, 53, 62]
+
+Find: 
+33
+
+Process:
+
+1. Check middle.
+
+2. Go left or right.
+
+3. Repeat.
+
+---
+
+# Binary Search Complexity
+
+Each comparison cuts the problem size in half.
+
+Runtime:
+
+T(N) ~ log N
+
+Maximum comparisons:
+
+1 + log base 2 (N)
+
+Binary search is much faster than Linear Search for large inputs.
+
+---
+
+# Faster 3-SUM Using Binary Search
+
+Brute Force:
+
+```
+for(i)
+    for(j)
+    	for(k)
+```
+
+Runtime:
+
+T(N) ~ N^3
+
+---
+
+Improved idea:
+
+1. Sort the array.
+
+2. Choose two numbers.
+
+3. Compute:
+
+- target = -(a[i] + a[j])
+
+4. Use Binary Search to find target.
+
+If target exists:
+
+a[i] + a[j] + target = 0
+
+---
+
 # Key takeaways
 
 - Algorithms can be analyzed scientifically.
@@ -242,3 +372,7 @@ N^3 dominates smaller terms.
 - Ignore low-order terms for large N.
 - Growth rate matters more than exact runtime.
 - Triple nested loops generally indicate cubic growth.
+- Runtime Patterns usually determines the performance of your algorithm.
+- The most preferred runtime is Linear(N) and Linearithmic (N log N).
+- The less scalable runtime is Quadratic(N) and Cubic(N).
+- Using Binary Search signigicantly reduces runtime for large inputs.
