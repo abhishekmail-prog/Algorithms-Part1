@@ -27,3 +27,12 @@
 - A problem can often be sped by using a better algorithm instead of faster hardware.
 - The 3-SUM problem can be improved from O(N^3) to O(N^2 log N) using sorting and Binary Search.
 - Better order of growth usually leads to much better real-world performance.
+- Algorithms can have best-case, average case, and worst-case performance.
+- Worst-case analysis provides performance guarantees.
+- Big O represents a upper bound on running time.
+- Big Omega represents a lower bound on running time.
+- Big Theta represents the exact order of growth.
+- An algorithm is optimal O(N) solution.
+- The 1-SUM problem has an optimal Theta(N) solution.
+- The true complexity of the 3-SUM problem is still unknown.
+- Big O is useful for classifying algorithms, but not for precise runtime prediction.
