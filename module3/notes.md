@@ -362,17 +362,168 @@ a[i] + a[j] + target = 0
 
 ---
 
-# Key takeaways
+# Types of Analysis
 
-- Algorithms can be analyzed scientifically.
-- Experimental measurements help identify growth patterns.
-- Mathematical models explain why algorithms behave that way.
-- Running Time = Cost x Frequenncy.
-- Focys on dominant terms.
-- Ignore low-order terms for large N.
-- Growth rate matters more than exact runtime.
-- Triple nested loops generally indicate cubic growth.
-- Runtime Patterns usually determines the performance of your algorithm.
-- The most preferred runtime is Linear(N) and Linearithmic (N log N).
-- The less scalable runtime is Quadratic(N) and Cubic(N).
-- Using Binary Search signigicantly reduces runtime for large inputs.
+The performance of an algorithm can vary depending on the input.
+
+## Best Case
+
+Minimum running time.
+
+Example:
+- Binary Search finds the target immediately.
+
+Runtime:
+
+O(1)
+
+---
+
+## Worst Case
+
+Maximum running time.
+
+Provides a guarantee that the algorithm will never be slower than this bound.
+
+Example:
+- Binary Search may need to repeatedly divide the search space.
+
+Runtime:
+
+O(log N)
+
+---
+
+## Average Case
+
+Expected running time over many possible inputs.
+
+Often requires a probablistic model of the input.
+
+---
+
+# Why Worst Case Matters
+
+Worst-case analysis provides predictable performance guarantees.
+
+Goal:
+- Ensurer the algorithm performs well for every input.
+
+Alternative:
+- Use randomized algorithms that provide probablistic guarantees.
+
+---
+
+# Theory of Algorithms
+
+Main Goal:
+
+Determine how difficult a problem is and find the best possible algorithm.
+
+Questions:
+- What is the fastest algorithm for this problem?
+- Can any algorithm do better?
+
+---
+
+# Asymptoticc Notations
+
+Used to classify algorithms by growth rate.
+
+## Big O (O)
+
+Upper Bound.
+
+Meaning: 
+The runnning time grows no faster than n constant multiple of the function.
+
+Example:
+
+O(N^2)
+
+The algorithm is at the most quadratic.
+
+---
+
+## Big Omega  
+
+Lower Bound.
+
+Meaning: 
+The running time grows at least as fast as a constant multiple of the function.
+
+Example:
+
+Omega(N)
+
+The algorithm cannot be faster than linear time.
+
+---
+
+## Big Theta 
+
+Tight Bound.
+
+Meaning: 
+Both upper and lower bounds match.
+
+Example:
+
+O(N^2)
+
+The algorithm grows exactly quadratically.
+
+---
+
+# Relationship Between Notations
+
+Omega(N) <= Theta(N) <= O(N)
+
+Interpertation:
+
+- Omega -> Lower Bound
+- Theta -> Exact Growth
+- O     -> Upper Bound
+
+---
+
+# Optimal Algorithms 
+
+An algorithm is optimal when its upper and lower bounds match.
+
+Example: 1-SUM
+
+Upper Bound: 
+O(N)
+
+Lower Bound: 
+Omega(N)
+
+Lower Bound:
+Theta(N)
+
+Therefore:
+
+Theta(N)
+
+The linear-time algorithm is optimal.
+
+---
+
+# 3-SUM Complexity
+
+Current Known Upper BOund:
+
+O(N^2 log N)
+
+(using sorting + Binary Search)
+
+Known Lower Bound:
+
+Omega(N)
+
+(because all inputs values must be examined)
+
+---
+
+
