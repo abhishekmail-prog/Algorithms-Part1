@@ -526,4 +526,144 @@ Omega(N)
 
 ---
 
+# Memory Analysis
+
+## Why Analyze Memory?
+
+Besides running time, we also need to know:
+
+- How much memory an algorithm uses.
+- Whether it can handle large inputs.
+- Whether it may run out of memory.
+
+Memory usage is usually measured in bytes.
+
+---
+
+## Primmitive Type Memory Usage
+
+Typical sizes on modern 64-bit systems:
+
+Type					Memory
+---
+boolean					1 bytes
+
+char					2 bytes
+
+int					3 bytes
+
+float					4 bytes
+
+long					8 bytes
+
+double					6 bytes
+
+Most common in DSA:
+- int    -> 4 bytes
+- double -> 8 bytes
+
+---
+
+## Array Memory Usage
+
+Memory Formula:
+
+Memory = Array Overhead + Element Memory
+
+Examples:
+
+int array of size N:
+
+Memory = 24 + 4N bytes
+
+double array of size N.
+
+Memory = 24 + 8N bytes
+
+Using tildde notation:
+
+24 + 8N ~ 8N
+
+For large N, constants become insignificant.
+
+---
+
+Object Memory Usage
+
+Objects require:
+
+- Object overhead
+- Instance variable
+- References
+- Padding
+
+Formula:
+
+Object Memory = Object Overhead + 
+		Instance Variables + 
+		Padding
+
+Objects use mmore memory than primitive types.
+
+---
+
+## References (Pointers)
+
+On modern 64-bit systems:
+
+Reference  = 8 bytes
+
+References store memory addresses.
+
+---
+
+## String Memory Usage
+
+Approximiate Formula:
+
+Memory ~ 2N + 64 bytes
+
+Where:
+
+N = length of the string
+
+Strings require additional memory for:
+
+- Characters
+- References
+- Hash values
+
+---
+
+## Weighted Quick Union Memory Analysis
+
+Components:
+
+- Object overhead
+- parent[] array
+- size[] array
+- count variable
+
+Memory:
+
+16 +
+(24 + 4N) +
+(24 + 4N) {
+4 + 
+4
+
+= 8N + 88
+
+Using tilde notation:
+
+~ 8N
+
+Therefore:
+
+Memory Complexity = Theta(N)
+
+Weighted Quick Union uses linear memory.
+
+---
+
 
