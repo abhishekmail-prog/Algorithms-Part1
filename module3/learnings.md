@@ -36,3 +36,12 @@
 - The 1-SUM problem has an optimal Theta(N) solution.
 - The true complexity of the 3-SUM problem is still unknown.
 - Big O is useful for classifying algorithms, but not for precise runtime prediction.
+- Memory usage is another important measure besides running time.
+- int uses 4 bytes and double uses 8 bytes.
+- Array require memory for both array elements and array overhead.
+- Objects have additional memory overhead.
+- References (pointers) typically use 8 bytes onn 64-bit systems.
+- String memory usage is roughly proportional to its length.
+- Memory analysis also uses tilde (~) notation to ignore small constants.
+- Weighted Quick Union used approximately 8N bytes of memory.
+- Algorithms can be analyzed using both runtime andd memory consumption.
